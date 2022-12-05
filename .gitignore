@@ -6,4 +6,3 @@ infra/.terraform
 infra/.terraform.lock.hcl
 build
 .idea
-go.sum
