@@ -10,10 +10,6 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ec2/types"
 )
 
-type Environment struct {
-	TagList []string `json:"Tags"`
-}
-
 var client *ec2.Client
 
 func init() {
@@ -25,12 +21,13 @@ func init() {
 	client = ec2.NewFromConfig(cfg)
 }
 
-func HandleRequest(environment Environment) ([]string, error) {
+func HandleRequest() ([]string, error) {
+	var tagList = []string{"dev", "test"}
 	var result, err = client.DescribeInstances(context.TODO(), &ec2.DescribeInstancesInput{
 		Filters: []types.Filter{
 			{
 				Name:   aws.String("tag:Env"),
-				Values: environment.TagList,
+				Values: tagList,
 			},
 		},
 	})
