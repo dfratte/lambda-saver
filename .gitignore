@@ -1,0 +1,9 @@
+infra/provider.tf
+*.tfstate
+*.tfstate.backup
+*.json
+infra/.terraform
+infra/.terraform.lock.hcl
+build
+.idea
+go.sum
