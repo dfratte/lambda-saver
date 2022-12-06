@@ -2,7 +2,7 @@
 
 ![Build](https://github.com/dfratte/lambda-saver/actions/workflows/build.yaml/badge.svg)
 
-A lambda for optimized EC2 usage for dev and test environments
+A lambda for optimized EC2 usage of dev and test environments
 
 ## Description
 
@@ -50,3 +50,5 @@ AWS console (with the right permissions), and then create an [EventBridge rule](
    - Change directory to the infra dir `cd infra`
    - Run terraform workflow once authenticated in your cloud `terraform init`, 
 `terraform plan`, and `terraform apply`
+
+#### More information [here](https://medium.com/@drfratte/last-one-out-turn-off-the-lights-9647c8b3f52d)
